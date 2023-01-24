@@ -1,0 +1,7 @@
+/settings_local.py
+venv
+*.pyc
+__pychache__
+.idea
+
+
