@@ -1,6 +1,7 @@
 import datetime
 from dataclasses import dataclass
 
+from exchangelib import Folder
 from exchangelib.items import Item
 
 
@@ -46,3 +47,8 @@ def save_item_as_elm(item:Item, file_path:str):
     with open(file_path,"w",newline='') as f:
         data =item.mime_content.decode("utf-8")
         f.write(data)
+
+
+def move_item_to_folder(item:Item, folder:Folder):
+    item.move(folder)
+

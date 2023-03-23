@@ -30,3 +30,20 @@ def iter_folder_items(folder:Folder):
     for item in folder.all():
         yield item
 
+
+def get_sub_folder(root_folder:Folder, sub_folder_name:str)->Folder:
+    return root_folder / sub_folder_name
+
+
+def get_account_root_folder(account:Account)->Folder:
+    return account.root
+
+
+def refresh_folder_cache(a:Account):
+    a.root.refresh()
+    #a.public_folders_root.refresh()
+    #a.archive_root.refresh()
+
+
+def get_mailbox_root_folder(account:Account)->Folder:
+    return account.inbox.parent

@@ -4,7 +4,7 @@ setup(
     name='dkm_lib_exchange',
     packages=['dkm_lib_exchange'],
     description='Denkmal Exchange Server Utils',
-    version='1.0',
+    version='1.1',
     url='http://github.com/michaeldenkmal/dkm-py-lib-exchange',
     author='michael',
     author_email='michael@denkmal.at',
